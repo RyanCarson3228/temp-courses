@@ -6,6 +6,7 @@ import static org.junit.Assert.assertThat;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -31,7 +32,7 @@ public class CourseRepositoryTest {
 	@Test
 	public void shouldFindSecondCourse() {
 
-		underTest = new CourseRepository(Arrays.asList(firstCourse, secondCourse));
+		underTest = new CourseRepository(firstCourse, secondCourse);
 
 		Course result = underTest.findOne(secondCourseId);
 
